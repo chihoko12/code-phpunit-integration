@@ -21,6 +21,11 @@ class LockDownRepository extends ServiceEntityRepository
         parent::__construct($registry, LockDown::class);
     }
 
+    public function isInLockDown(): bool
+    {
+        return false;
+    }
+
 //    /**
 //     * @return LockDown[] Returns an array of LockDown objects
 //     */

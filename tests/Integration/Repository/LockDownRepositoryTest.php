@@ -7,9 +7,12 @@ use App\Enum\LockDownStatus;
 use App\Repository\LockDownRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Zenstruck\Foundry\Test\Factories;
+use Zenstruck\Foundry\Test\ResetDatabase;
 
 class LockDownRepositoryTest extends KernelTestCase
 {
+    use ResetDatabase, Factories;
     public function testIsInLockDownWithNoLockDownRows(): void
     {
         self::bootKernel();
